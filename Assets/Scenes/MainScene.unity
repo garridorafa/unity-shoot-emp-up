@@ -10163,12 +10163,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moverComponent: {fileID: 1778885889}
+  speed: 7
   boundary:
     xMinimun: -8.7
     xMaximun: 8.7
     yMinimun: -4.5
     yMaximun: 4.5
-  speed: 7
 --- !u!4 &1778885888
 Transform:
   m_ObjectHideFlags: 0
@@ -10196,3 +10196,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17e84dadb6a31647a3f9f7ea0339145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
+  speed: 0

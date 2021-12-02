@@ -11,13 +11,18 @@ public class Boundary
 public class PlayerController : MonoBehaviour
 {
     public Mover moverComponent;
+    public float speed;
     public Boundary boundary;
-    public float speed = 1;
+
+    void Start()
+    {
+        moverComponent.speed = speed;
+    }
 
     void Update()
     {
-        Vector3 displacement = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, Input.GetAxis("Vertical") * speed * Time.deltaTime, transform.position.z);
-        moverComponent.DoMove(displacement);
+        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), transform.position.z);
+        moverComponent.direction = direction;
 
         float x = Mathf.Clamp(transform.position.x, boundary.xMinimun, boundary.xMaximun);
         float y = Mathf.Clamp(transform.position.y, boundary.yMinimun, boundary.yMaximun);
